@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Galerie - Kambale Mutheke Saïd</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background: #000;
+      padding: 1rem 2rem;
+      position: relative;
+    }
+
+    .logo h1 {
+      margin: 0;
+      color: #fff;
+    }
+
+    .slogan {
+      margin: 0;
+      font-size: 0.9rem;
+      color: orange;
+    }
+
+    .hamburger {
+      font-size: 1.8rem;
+      cursor: pointer;
+      color: white;
+    }
+
+    .nav {
+      position: absolute;
+      top: 60px;
+      right: 2rem;
+      background: #222;
+      border: 1px solid #333;
+      display: none;
+      flex-direction: column;
+    }
+
+    .nav.open {
+      display: flex;
+    }
+
+    .nav ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      }
+
+    .nav li {
+      border-bottom: 1px solid #333;
+    }
+
+    .nav a {
+      display: block;
+      padding: 0.8rem 1.5rem;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .nav a:hover {
+      background: orange;
+      color: black;
+    }
+
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 15px;
+      padding: 20px;
+    }
+
+    .gallery img {
+      width: 100%;
+      height: auto;
+      border-radius: 6px;
+      object-fit: cover;
+      border: 1px solid #444;
+    }
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <h1>KAMBALE MUTHEKE SAÏD</h1>
+      <p class="slogan">Scénariste, Acteur et Cinéaste</p>
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <h2 style="text-align: center; margin-top: 20px;">Galerie</h2>
+    <div class="gallery" id="gallery"></div>
+  </main>
+
+  <script>
+    
+    const hamburger = document.getElementById("hamburger");
+    const nav = document.getElementById("nav");
+    hamburger.addEventListener("click", () => {
+      nav.classList.toggle("open");
+    });
+
+
+const gallery = document.getElementById("gallery");
+
+const imageNames = Array.from({ length: 17 }, (_, i) => i === 0 ? "said" : `saidi`);
+
+imageNames.forEach(name => 
+  const img = document.createElement("img");
+  img.src = `images/{name}.jpg`;
+  img.alt = name;
+  gallery.appendChild(img);
+});
+  </script>
+</body>
+</html>
