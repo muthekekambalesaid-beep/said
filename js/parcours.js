@@ -1,4 +1,3 @@
-
   import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
   import { getFirestore, collection, getDocs, query, orderBy } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-firestore.js";
 
@@ -19,8 +18,9 @@
 async function chargerProjets() {
   try {
     const colRef = collection(db, "projects");
-    const snapshot = await getDocs(colRef);  // on enlève orderBy pour tester
-
+  //  const snapshot = await getDocs(colRef);  
+    const q = query(colRef, orderBy("date", "desc"));
+const snapshot = await getDocs(q);
     if (snapshot.empty) {
       listeProjets.innerHTML = "<p>Aucun projet trouvé.</p>";
       return;
