@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Inscription</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background: #111;
+      color: white;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 40px;
+    }
+
+    h2 {
+      color: orange;
+    }
+
+    form {
+      background: #222;
+      padding: 20px;
+      border-radius: 10px;
+      width: 300px;
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+
+    input {
+      padding: 10px;
+      border: none;
+      border-radius: 5px;
+    }
+
+    button {
+      padding: 10px;
+      background: orange;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    .message {
+      margin-top: 15px;
+      color: lightgreen;
+    }
+  </style>
+</head>
+<body>
+  <h2>Créer un compte</h2>
+  <form id="signupForm">
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="password" id="password" placeholder="Mot de passe" required />
+    <button type="submit">S'inscrire</button>
+    </form>
+  <div class="message" id="message"></div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-app.js";
+    import { getAuth, createUserWithEmailAndPassword } from "https://www.gstatic.com/firebasejs/12.4.0/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDh1MNL0RYp8Dk-UoDoqf0sSdS84AhRXHk",
+      authDomain: "said-mutheke.firebaseapp.com",
+      projectId: "said-mutheke",
+      storageBucket: "said-mutheke.appspot.com",
+      messagingSenderId: "378853548599",
+      appId: "1:378853548599:web:701a11d4f8a9cd6b1d95b2"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    const form = document.getElementById("signupForm");
+    const message = document.getElementById("message");
+
+    form.addEventListener("submit", (e) => {
+      e.preventDefault();
+      const email = document.getElementById("email").value;
+      const password = document.getElementById("password").value;
+
+      createUserWithEmailAndPassword(auth, email, password)
+        .then((userCredential) => {
+          message.textContent = "Inscription réussie !";
+          form.reset();
+        })
+        .catch((error) => {
+          message.textContent = "Erreur : " + error.message;
+        });
+        });
+  </script>
+</body>
+</html>
+
+
