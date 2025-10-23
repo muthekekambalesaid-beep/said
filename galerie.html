@@ -125,11 +125,16 @@
 
 const gallery = document.getElementById("gallery");
 
-const imageNames = Array.from({ length: 17 }, (_, i) => i === 0 ? "said" : `saidi`);
+const imageNames = [
+  "said", "said1", "said2", "said3", "said4",
+  "said5", "said6", "said7", "said8", "said9",
+  "said10", "said11", "said12", "said13", "said14",
+  "said15", "said16"
+];
 
-imageNames.forEach(name => 
+imageNames.forEach(name => {
   const img = document.createElement("img");
-  img.src = `images/{name}.jpg`;
+  img.src = `images/${name}.jpg`;
   img.alt = name;
   gallery.appendChild(img);
 });
