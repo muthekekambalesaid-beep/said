@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>À propos</title>
+  <style>
+  body.dark-theme {
+  background-color: #121212;
+  color: #f5f5f5;
+  font-family: 'Segoe UI', sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.slogan {
+  margin: 0;
+  font-size: 0.9rem;
+  color: orange;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+.nav {
+  position: absolute;
+  top: 60px;
+  right: 2rem;
+  background: #222;
+  border: 1px solid #333;
+  display: none;
+  flex-direction: column;
+}
+
+.nav.open {
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  border-bottom: 1px solid #333;
+}
+
+.nav a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background: orange;
+  color: black;
+}
+
+ footer {
+  background-color: #1f1f1f;
+  color: #f5f5f5;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.menu-toggle {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: white;
+  cursor: pointer;
+}
+
+nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+nav a {
+  color: #f5f5f5;
+  text-decoration: none;
+}
+
+nav a.active {
+  color: orange;
+}
+
+nav.hidden {
+  display: none;
+}
+
+.apropos {
+  padding: 60px 5px;
+  background-color: #121212;
+  color: #fff;
+  max-width: 1000px;
+  margin: auto;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.intro-bloc {
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+  margin-bottom: 40px;
+}
+
+.intro-texte {
+  flex: 5;
+  padding: 0;
+}
+
+.intro-photo {
+  flex: 4;
+  padding: 0;
+  max-width: 1000px;
+}
+
+.intro-photo img {
+  width: 100%;
+  padding: 0;
+  aspect-ratio: 9 / 12;
+  object-fit: cover;
+  border-radius: 8px;
+  display: block;
+}
+
+.contenu-texte p,
+.contenu-texte ul {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.contenu-texte h3 {
+  margin-top: 30px;
+}
+
+.competences h2 {
+  color: orange;
+  margin-bottom: 1rem;
+}
+.skills {
+  display: flex;
+  width: 85%;
+  flex-wrap: wrap;
+  gap: 2rem;
+}
+
+.skills div {
+  flex: 1;
+}
+
+.skills h2 {
+  margin-bottom: 0.5rem;
+  color: #ffa500;
+}
+
+.skills ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.skills li {
+  margin-bottom: 0.3rem;
+}
+
+footer {
+  flex-direction: column;
+  text-align: center;
+}
+
+footer p {
+  margin: 0.5rem 0;
+  font-size: 0.9rem;
+}
+
+footer .socials {
+  margin-top: 0.5rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+footer .socials img {
+  width: 24px;
+  height: 24px;
+}
+</style>
+</head>
+<body class="dark-theme">
+
+    <header class="header">
+    <div class="logo">
+      <h1>KAMBALE MUTHEKE SAÏD</h1>
+      <p class="slogan">Scénariste, Acteur et Cinéaste</p>
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+    <section class="apropos">
+  <div class="intro-bloc">
+    <div class="intro-texte">
+      <h2>À propos de moi</h2>
+      <p>Acteur et cinéaste congolais, passionné par les thrillers et les histoires intenses mêlant fiction et réalité, je pratique depuis 2017.
+      </p>
+    </div>
+    <div class="intro-photo">
+      <img src="https://picsum.photos/1200/675" alt="Photo de profil">
+    </div>
+  </div>
+
+  <div class="contenu-texte">
+    <p>Mon ambition est de développer mon potentiel à l’international tout en contribuant à des projets engagés dans la lutte contre l’injustice sociale et l’éradication des conflits, particulièrement en Afrique
+    </p>
+    <p>Mes créations se concentrent principalement sur des thrillers liés à la guerre en Afrique, notamment au Congo. Mes histoires originales visent une forte compétitivité en festivals. </p>
+    <p>Depuis 2019, je travaille sur <strong>L’EST</strong>, une saga composée de six titres, dont <strong>L’EST 1</strong> est en cours de réalisation, où j’assure également le rôle principal.</p>
+    <p>Je suis fier d’être l’un des membres fondateurs d’<strong>Efilm Hub</strong>, une plateforme dédiée aux cinéastes, techniciens, talents et conteurs africains.</p>
+  </div>
+</section>
+
+    <section class="competences">
+  <h2>Compétences</h2>
+  <div class="skills">
+    <div>
+      <h3>Techniques</h3>
+      <ul>
+  <li>kit scénariste</li>
+  <li>Microsoft Word</li>
+  <li>Écriture manuscrite</li>
+</ul>
+    </div>
+    <div>
+      <h3>Créatives</h3>
+      <ul>
+        <li>Scénarios</li>
+        <li>Storyboarding</li>
+        <li>Peinture, dessin traditionnel</li>
+      </ul>
+    </div>
+    <div>
+      <h3>Transversales</h3>
+      <ul>
+        <li>Gestion de projet audiovisuel</li>
+        <li>Collaboration artistique</li>
+        <li>Esprit critique & sens narratif</li>
+      </ul>
+    </div>
+  </div>
+  </section>
+  </main>
+
+  <footer>
+    <div class="socials">
+    <a href="mailto:mutheke@email.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="email"></a>
+    <a href="https://wa.me/243815740845?text=Bonjour%20Mutheke%2C%20je%20viens%20de%20voir%20votre%20portfolio"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    <a href="https://facebook.com/mutheke"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+    <a href="https://instagram.com/mutheke"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+    </div>
+    <p>© Créativité & Vision — Tous les visuels appartiennent à leur auteur</p>
+  </footer>
+  
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

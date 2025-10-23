@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <title>Portfolio</title>
+  <style>
+    body {
+      background-color: #121212;
+      color: #fff;
+      font-family: sans-serif;
+      margin: 0;
+      padding: 0;
+    }
+    .header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.slogan {
+  margin: 0;
+  font-size: 0.9rem;
+  color: orange;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+
+.nav {
+  position: absolute;
+  top: 60px;
+  right: 2rem;
+  background: #222;
+  border: 1px solid #333;
+  display: none;
+  flex-direction: column;
+}
+
+.nav.open {
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  border-bottom: 1px solid #333;
+}
+
+.nav a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background: orange;
+  color: black;
+}
+
+    .portfolio {
+      padding: 40px 20px;
+      max-width: 900px;
+      margin: auto;
+    }
+    .bloc-projet {
+      margin-bottom: 60px;
+    }
+    .img-projet {
+      float: right;
+      width: 300px;
+      height: 400px;
+      margin-left: 20px;
+      object-fit: cover;
+    }
+    .bloc-projet:after {
+      content: "";
+      display: block;
+      clear: both;
+    }
+    .footer {
+  background: #000;
+  padding: 1rem 0;
+  text-align: center;
+}
+.footer-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-links img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1); /* Pour icônes sombres */
+  transition: transform 0.2s;
+}
+
+.footer-links img:hover {
+  transform: scale(1.2);
+  filter: invert(55%) sepia(83%) saturate(7482%) hue-rotate(1deg) brightness(99%) contrast(100%);
+}
+  </style>
+  </head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <h1>KAMBALE MUTHEKE SAÏD</h1>
+      <p class="slogan">Scénariste & Créateur d’histoires visuelles</p>
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <h1 style="text-align:center;">Portfolio de Mutheke</h1>
+  <section class="portfolio" id="portfolio"></section>
+    <footer class="footer">
+  <div class="footer-links">
+     <a href="Muthekekambalesaid@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="email"></a>
+    <a href="https://wa.me/243971295572?text=Bonjour%20Mutheke%2C%20je%20viens%20de%20voir%20votre%20portfolio"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    <a href="https://www.facebook.com/mutheke.kambale.2025"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/mutheke_le_professeur?igsh=MXZ6dWh5b3k5ejY1Ng=="><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+    <p>© Portfolio créatif de Mutheke – Narration & Imagination</p>
+  </div>
+  
+  <p>© 2025 Scénario & créativité par MUTHEKE</p>
+  
+</footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
+  </script>
+  <script type="module" src="./js/portfolio.js"></script>
+</body>
+</html>

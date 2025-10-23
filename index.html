@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Mutheke</title>
+  <style>
+  body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background-color: #111;
+  color: #fff;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.slogan {
+  margin: 0;
+  font-size: 0.9rem;
+  color: orange;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+.nav {
+  position: absolute;
+  top: 60px;
+  right: 2rem;
+  background: #222;
+  border: 1px solid #333;
+  display: none;
+  flex-direction: column;
+}
+
+.nav.open {
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  border-bottom: 1px solid #333;
+}
+
+.nav a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background: orange;
+  color: black;
+}
+
+.banner img {
+  width: 100%;
+  aspect-ratio: 9 / 5;
+  object-fit: cover;
+  display: block;
+}
+
+.hero {
+  padding: 4rem 2rem;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 2.5rem;
+  color: orange;
+}
+
+.hero p {
+  font-size: 1.2rem;
+  color: #ddd;
+}
+
+.historique-section {
+  background-color: #333844;
+  color: #ffffff;
+  padding: 20px;
+  margin: 20px 0;
+  border-radius: 8px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.historique-section h2 {
+  margin-bottom: 15px;
+}
+
+.historique-section p {
+  line-height: 1.5;
+}
+
+.contact-email {
+  margin-top: 15px;
+  font-style: italic;
+  color: #ffa500; 
+}
+
+.footer {
+  background: #000;
+  padding: 1rem 0;
+  text-align: center;
+}
+.footer-links a {
+  margin: 0 10px;
+  display: inline-block;
+}
+
+.footer-links img {
+  width: 24px;
+  height: 24px;
+  filter: invert(1);
+  transition: transform 0.2s;
+}
+
+.footer-links img:hover {
+  transform: scale(1.2);
+  filter: invert(55%) sepia(83%) saturate(7482%) hue-rotate(1deg) brightness(99%) contrast(100%);
+}
+
+  </style>
+</head>
+<body>
+  <header class="header">
+    <div class="logo">
+      <h1>KAMBALE MUTHEKE SAÏD</h1>
+      <p class="slogan">Scénariste, Acteur et Cinéaste</p>
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+  <main class="hero">
+  <section class="banner">
+  <img src="https://picsum.photos/1200/675" alt="Bannière" />
+</section>
+
+    <h2>Bienvenue</h2>
+    <p>Je suis Kambale Mutheke Saïd, scénariste et cinéaste congolais. J’écris des scénarios profonds, entre fiction et réalité, portés par une vision engagée et humaine. À travers mes projets, je cherche à raconter l’Afrique, ses douleurs, ses forces, et ses vérités oubliées.
+    </p>
+    
+    <section class="historique-section">
+  <h2>Bref Historique</h2>
+  <p> Mon parcours dans le monde de cinéma a commencé par une passion : raconter des histoires fortes, touchantes, ancrées dans la réalité ou portées par la fiction. </br>
+      Depuis mes débuts, je m'investis dans des projets qui parlent d’humanité, de justice, de paix, et de conflits oubliés. Membre fondateur du groupe Efilm Hub, j'ai aussi joué un rôle antagoniste dans le court-métrage MIREMBE (La Paix), où j'ai également contribué à l'écriture du scénario.</p>
+  <p class="contact-email">Contact : muthekekambalesaid@gmail.com</p>
+</section>
+  </main>
+  
+  <footer class="footer">
+  <div class="footer-links">
+     <a href="mailto:muthekekambalesaid@gmail.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="email"></a>
+    <a href="https://wa.me/243971295572?text=Bonjour%20Mutheke%2C%20je%20viens%20de%20voir%20votre%20portfolio"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    <a href="https://www.facebook.com/mutheke.kambale.2025"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+    <a href="https://www.instagram.com/mutheke_le_professeur?igsh=MXZ6dWh5b3k5ejY1Ng=="><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>
+    <p>© Portfolio créatif de Mutheke – Narration & Imagination</p>
+  </div>
+  
+  <p>© 2025 Scénario & créativité par MUTHEKE</p>
+  
+</footer>
+
+  <script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
+  </script>
+</body>
+</html>

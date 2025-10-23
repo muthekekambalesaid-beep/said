@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Parcours - Mutheke</title>
+  <style>
+  body.dark-theme {
+  background-color: #121212;
+  color: #fff;
+  font-family: sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #000;
+  padding: 1rem 2rem;
+  position: relative;
+}
+
+.logo h1 {
+  margin: 0;
+  color: #fff;
+}
+
+.slogan {
+  margin: 0;
+  font-size: 0.9rem;
+  color: orange;
+}
+
+.hamburger {
+  font-size: 1.8rem;
+  cursor: pointer;
+  color: white;
+}
+
+.nav {
+  position: absolute;
+  top: 60px;
+  right: 2rem;
+  background: #222;
+  border: 1px solid #333;
+  display: none;
+  flex-direction: column;
+}
+
+.nav.open {
+  display: flex;
+}
+
+.nav ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav li {
+  border-bottom: 1px solid #333;
+}
+
+.nav a {
+  display: block;
+  padding: 0.8rem 1.5rem;
+  color: #fff;
+  text-decoration: none;
+}
+
+.nav a:hover {
+  background: orange;
+  color: black;
+}
+
+.footer {
+  background-color: #1e1e1e;
+  padding: 15px 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+ .footer p {
+  margin: 0;
+  color: orange;
+}
+
+.container {
+  max-width: 900px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+.bloc {
+  margin-bottom: 50px;
+}
+
+.bloc h1 {
+  color: #ff6600;
+  font-size : 2rem;
+  margin-bottom: 30px;
+  }
+
+.bloc h2 {
+  color: orange;
+  margin-bottom: 20px;
+}
+
+.item {
+  margin-bottom: 25px;
+}
+
+.item h3 {
+  margin: 0;
+  color: #ff944d;
+}
+
+.footer {
+  background-color: #1c1c1c;
+  text-align: center;
+  padding: 20px;
+}
+
+.footer a img {
+  width: 24px;
+  margin: 0 10px;
+  vertical-align: middle;
+}
+  </style>
+</head>
+<body class="dark-theme">
+
+  <header class="header">
+    <div class="logo">
+      <h1>KAMBALE MUTHEKE SAÏD</h1>
+      <p class="slogan">Scénariste, Acteur et Cinéaste</p>
+    </div>
+    <div class="hamburger" id="hamburger">&#9776;</div>
+    <nav class="nav" id="nav">
+      <ul>
+        <li><a href="index.html">Accueil</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="parcours.html">Parcours</a></li>
+        <li><a href="apropos.html">À propos</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="container">
+<section class="bloc" id="projets-dynamiques">
+  <h2>Mes Projets</h2>
+  <div id="liste-projets"></div>
+</section>
+
+    <section class="bloc">
+      <h2>Formation & Certifications</h2>
+
+      <div class="item">
+        <h3>Licence en Lettres Modernes – UNIKIN (2020)</h3>
+        <p>Spécialisation en dramaturgie.</p>
+      </div>
+
+      <div class="item">
+        <h3>Certificat Adobe Storytelling (2022)</h3>
+        <p>Formation en narration visuelle et multimédia.</p>
+      </div>
+    </section>
+
+    <section class="bloc">
+      <h2>Publications & Distinctions</h2>
+
+      <div class="item">
+        <h3>Publication : « Voix d’argile » (revue AFRODOC, 2023)</h3>
+        <p>Essai sur l’art et la mémoire en Afrique centrale.</p>
+      </div>
+
+      <div class="item">
+        <h3>Distinction : Lauréat du concours « Plume Kinoise » (2021)</h3>
+        <p>Prix du meilleur scénario court.</p>
+      </div>
+    </section>
+  </main>
+  
+  
+  <footer class="footer">
+    <a href="mailto:mutheke@email.com"><img src="https://cdn-icons-png.flaticon.com/512/732/732200.png" alt="email"></a>
+    <a href="https://wa.me/243815740845?text=Bonjour%20Mutheke%2C%20je%20viens%20de%20voir%20votre%20portfolio"><img src="https://cdn-icons-png.flaticon.com/512/733/733585.png" alt="WhatsApp"></a>
+    <a href="https://facebook.com/mutheke"><img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"></a>
+    <a href="https://instagram.com/mutheke"><img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"></a>   </br>
+    <p>© Portfolio créatif de Mutheke – Narration & Imagination</p>
+  </footer>
+  
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const nav = document.getElementById('nav');
+    hamburger.addEventListener('click', () => {
+        nav.classList.toggle('open');
+    });
+  </script>
+  <script type="module" src="./js/parcours.js"></script>
+</body>
+</html>
